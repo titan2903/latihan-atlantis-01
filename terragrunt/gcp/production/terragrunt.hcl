@@ -1,9 +1,9 @@
 remote_state {
   backend = "gcs" // stor to Google Cloud Storage
   config = {
-    bucket         = "atlantis-stag-01"
+    bucket         = "atlantis-prod-01"
     prefix    = "${path_relative_to_include()}/terraform.tfstate"
-    credentials = "/etc/atlantis/credential/gcp-staging.json"
+    credentials = "/etc/atlantis/credential/gcp-production.json"
   }
 }
 
@@ -12,7 +12,7 @@ inputs = {
   project = "studilabs-project-01"
   region = "asia-southeast2"
   zone = "asia-southeast2-a"
-  credentials = "/etc/atlantis/credential/gcp-staging.json"
+  credentials = "/etc/atlantis/credential/gcp-production.json"
 
   // network_name = "${basename(get_terragrunt_dir())}"
   // name = "${basename(get_terragrunt_dir())}" // instance name
