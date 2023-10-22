@@ -10,7 +10,6 @@ remote_state {
 // default or base configuration
 inputs = {
   project = "studilabs-project-01"
-  project_id = "studilabs-project-01"
   region = "asia-southeast2"
   zone = "asia-southeast2-a"
   credentials = "/etc/atlantis/credential/gcp-staging.json"
