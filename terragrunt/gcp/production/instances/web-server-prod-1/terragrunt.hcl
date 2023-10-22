@@ -1,22 +1,16 @@
-remote_state {
-  backend = "gcs" // store to Google Cloud Storage
-  config = {
-    bucket         = "atlantis-prod-01"
-    prefix    = "${path_relative_to_include()}/terraform.tfstate"
-    credentials = "/etc/atlantis/credential/gcp-production.json"
-  }
+terraform {
+  source = "../../../../../module/gcp/instance"
 }
 
-// default or base configuration
-inputs = {
-  project = "studilabs-project-01"
-  region = "asia-southeast2"
-  zone = "asia-southeast2-a"
-  credentials = "/etc/atlantis/credential/gcp-production.json"
-  name = "${basename(get_terragrunt_dir())}" // instance name
-  machine_type = "e2-micro"
+// find `terragrunt.hcl` for base configuration
+include {
+  path   = find_in_parent_folders()
+}
 
-  // network_name = "${basename(get_terragrunt_dir())}"
-  // image = "ubuntu-os-cloud/ubuntu-2204-lts"
-  // auto_create_subnetworks = false
+// Jika value di input ini tidak di defined, maka akan mengambil value dari base configuration
+inputs = {
+    network_tags = ["http-server", "https-server", "allow-ssh"]
+    network = "default"
+    sub_network = "default"
+    image = "ubuntu-os-cloud/ubuntu-2204-lts"
 }
