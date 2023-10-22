@@ -3,7 +3,7 @@ remote_state {
   config = {
     bucket         = "atlantis-prod-01"
     prefix    = "${path_relative_to_include()}/terraform.tfstate"
-    credentials = "/etc/atlantis/credential/gcp-production.json"
+    credentials = "/etc/atlantis/credential/gcp-production.json" // di sesuaikan dengan path location credentials json key
   }
 }
 
@@ -12,7 +12,7 @@ inputs = {
   project = "studilabs-project-01"
   region = "asia-southeast2"
   zone = "asia-southeast2-a"
-  credentials = "/etc/atlantis/credential/gcp-production.json"
+  credentials = "/etc/atlantis/credential/gcp-production.json" // di sesuaikan dengan path location credentials json key
   name = "${basename(get_terragrunt_dir())}" // instance name
   machine_type = "e2-micro"
   subnet_region = "asia-southeast2"
