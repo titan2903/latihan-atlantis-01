@@ -22,7 +22,7 @@ module "vpc" {
     version = "~> 7.3"
 
     project_id   = var.project
-    network_name = var.network_name
+    network_name = var.name
 
     subnets = [
         {

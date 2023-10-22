@@ -14,7 +14,7 @@ variable "credentials" {
   type = string
 }
 
-variable "network_name" {
+variable "name" {
   type = string
 }
 
