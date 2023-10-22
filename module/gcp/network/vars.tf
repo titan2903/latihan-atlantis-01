@@ -1,6 +1,5 @@
 variable "project" {
   type        = string
-  description = "isi dengan project id gcp"
 }
 
 variable "subnet_region" {
