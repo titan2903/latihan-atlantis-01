@@ -3,14 +3,14 @@ terraform {
 }
 
 provider "google" {
-  project     = var.project_id
+  project     = var.project
   region      = var.region
   zone        = var.zone
   credentials = var.credentials # login menggunakan json key yang telah di create
 }
 
 provider "google-beta" {
-  project     = var.project_id
+  project     = var.project
   region      = var.region
   zone        = var.zone
   credentials = var.credentials # login menggunakan json key yang telah di create
@@ -19,10 +19,10 @@ provider "google-beta" {
 
 module "vpc" {
     source  = "terraform-google-modules/network/google"
-    version = "~> 7.4"
+    version = "~> 7.3"
 
-    project_id   = var.project_id
-    network_name = var.network_name
+    project_id   = var.project
+    network_name = var.name
 
     subnets = [
         {

@@ -1,6 +1,5 @@
-variable "project_id" {
+variable "project" {
   type        = string
-  description = "isi dengan project id gcp"
 }
 
 variable "subnet_region" {
@@ -15,7 +14,7 @@ variable "credentials" {
   type = string
 }
 
-variable "network_name" {
+variable "name" {
   type = string
 }
 
