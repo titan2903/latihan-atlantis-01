@@ -15,6 +15,7 @@ inputs = {
   credentials = "/etc/atlantis/credential/gcp-production.json"
   name = "${basename(get_terragrunt_dir())}" // instance name
   machine_type = "e2-micro"
+  subnet_region = "asia-southeast2"
 
   // network_name = "${basename(get_terragrunt_dir())}"
   // image = "ubuntu-os-cloud/ubuntu-2204-lts"
