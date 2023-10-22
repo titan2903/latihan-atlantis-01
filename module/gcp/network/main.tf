@@ -13,7 +13,7 @@ provider "google-beta" {
   project     = var.project
   region      = var.region
   zone        = var.zone
-  credentials = var.credentials # login menggunakan json key yang telah di create
+  credentials = var.credentials
 }
 
 
