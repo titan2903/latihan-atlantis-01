@@ -15,5 +15,4 @@ inputs = {
   credentials = "/etc/atlantis/credential/gcp-staging.json"
   name = "${basename(get_terragrunt_dir())}" // instance name
   machine_type = "e2-micro"
-  network_name = "${basename(get_terragrunt_dir())}"
 }
