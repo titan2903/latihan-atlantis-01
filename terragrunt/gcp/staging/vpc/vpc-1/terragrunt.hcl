@@ -1,6 +1,5 @@
 terraform {
   source = "../../../../../module/gcp/network"
-backend "gcs" {}
 }
 
 // find `terragrunt.hcl` for base configuration
