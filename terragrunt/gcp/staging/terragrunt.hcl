@@ -14,9 +14,5 @@ inputs = {
   zone = "asia-southeast2-a"
   credentials = "/etc/atlantis/credential/gcp-staging.json"
   name = "${basename(get_terragrunt_dir())}" // instance name
-
-  // network_name = "${basename(get_terragrunt_dir())}"
-  // machine_type = "e2-micro"
-  // image = "ubuntu-os-cloud/ubuntu-2204-lts"
-  // auto_create_subnetworks = false
+  machine_type = "e2-micro"
 }
