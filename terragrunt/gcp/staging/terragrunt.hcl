@@ -1,5 +1,5 @@
 remote_state {
-  backend "gcs" {} // stor to Google Cloud Storage
+  backend = "gcs" // stor to Google Cloud Storage
   config = {
     bucket         = "atlantis-stag-01"
     prefix    = "${path_relative_to_include()}/terraform.tfstate"
