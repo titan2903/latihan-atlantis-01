@@ -8,6 +8,6 @@ include {
 }
 
 inputs = {
-    subnet_name = "subnet-staging-app"
+    subnet_name = "subnet-prod-app"
     subnet_ip = "192.168.200.0/24"
 }
