@@ -1,4 +1,4 @@
-variable "project_id" {
+variable "project" {
   type        = string
   description = "isi dengan project id gcp"
 }
